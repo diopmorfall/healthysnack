@@ -1,3 +1,28 @@
+.flex, .flex-row, .flex-row-space-around, .searchbar, .fruit-header, .details, .nutrient, .flex-column, .flex-column-space-around, .page, .fruit-infos, .nutritionals, body, header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.flex-row, .flex-row-space-around, .searchbar, .fruit-header, .details, .nutrient {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row; }
+
+.flex-column, .flex-column-space-around, .page, .fruit-infos, .nutritionals, body, header {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.flex-row-space-around, .searchbar, .fruit-header, .details {
+  -ms-flex-pack: distribute;
+      justify-content: space-around; }
+
+.flex-column-space-around, .page, .fruit-infos, .nutritionals {
+  -ms-flex-pack: distribute;
+      justify-content: space-around; }
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -7,3 +32,80 @@
 
 body {
   width: 100%; }
+
+header {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 200px;
+  border: 2px solid green; }
+
+.brand {
+  margin: 50px auto 35px auto;
+  font-style: italic; }
+  .brand a {
+    text-decoration: none;
+    color: black; }
+
+.searchbar {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80%;
+  height: 40px;
+  margin: 0 auto;
+  border: 2px solid black; }
+
+.searchbar, input, button {
+  border-radius: 20px; }
+
+input, button {
+  height: 75%;
+  border: none;
+  outline: none;
+  font-style: italic; }
+
+input {
+  width: 65%;
+  text-align: center;
+  background-color: lightgreen; }
+
+button {
+  width: 15%;
+  background: none; }
+
+.page {
+  margin-top: 30px;
+  border: 2px solid blue; }
+
+.fruit-infos {
+  width: 90%;
+  margin: auto;
+  border: 2px solid red;
+  border-radius: 25px; }
+
+.fruit-header {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 60px;
+  margin: auto; }
+
+.details {
+  height: 40px;
+  margin: 30px 0; }
+
+.nutritionals h4 {
+  text-align: center;
+  margin-bottom: 25px; }
+
+.nutrient {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 70%;
+  margin: 10px auto; }
+
+.details, .nutritionals {
+  display: none; }
