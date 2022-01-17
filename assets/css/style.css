@@ -1,4 +1,4 @@
-.flex, .flex-row, .flex-row-space-around, .searchbar, .fruit-header, .details, .nutrient, .flex-column, .flex-column-space-around, .page, .fruit-infos, .nutritionals, body, header {
+.flex, .flex-row, .flex-row-space-around, .searchbar, .fruit-header, .details, .nutrient, .flex-column, .flex-column-space-around, .page, .fruit-infos, .nutritionals, body, header, .-desktop-row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
@@ -9,7 +9,7 @@
       -ms-flex-direction: row;
           flex-direction: row; }
 
-.flex-column, .flex-column-space-around, .page, .fruit-infos, .nutritionals, body, header {
+.flex-column, .flex-column-space-around, .page, .fruit-infos, .nutritionals, body, header, .-desktop-row {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -109,3 +109,28 @@ button {
 
 .details, .nutritionals {
   display: none; }
+
+@media only screen and (max-height: 500px) and (orientation: landscape) {
+  .searchbar {
+    width: 70%; }
+  .fruit-infos {
+    width: 85%; } }
+
+@media only screen and (min-width: 650px) and (max-width: 999px) {
+  .searchbar {
+    width: 50%; }
+  .fruit-infos {
+    width: 75%; } }
+
+@media only screen and (min-width: 1000px) {
+  .searchbar {
+    width: 60%; }
+  .-desktop-row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around; }
+  .fruit-infos {
+    width: 40%; } }
