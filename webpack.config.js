@@ -3,8 +3,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
 	mode: 'development',
-	entry: './assets/js/animations.js',
-	watch: true,
+	entry: './assets/js/index.js',
+	//watch: true,
 
 	plugins: [
 		new HtmlWebpackPlugin({
